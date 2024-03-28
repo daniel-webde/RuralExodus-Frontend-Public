@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Neue Montreal';
+    src: url('../fonts/NeueMontreal-Bold.woff2') format('woff2'),
+         url('../fonts/NeueMontreal-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Neue Montreal';
+    src: url('fonts/NeueMontreal-Regular.woff2') format('woff2'),
+         url('fonts/neue-montreal-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+     font-family: 'Neue Montreal';
+     src: url('fonts/NeueMontreal-BoldItalic.woff') format('woff2'),
+          url('fonts/NeueMontreal-BoldItalic.woff2') format('woff');
+     font-weight: bold;
+     font-style: italic;
+   }
