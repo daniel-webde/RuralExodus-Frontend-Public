@@ -42,7 +42,7 @@ const Media = () => {
           <h2
             className={
               isHovered === 1
-                ? "text-red-500 text-xl font-bold pb-2"
+                ? "text-red-500 text-xl font-semibold pb-2"
                 : "text-black text-xl font-bold pb-2"
             }
           >
