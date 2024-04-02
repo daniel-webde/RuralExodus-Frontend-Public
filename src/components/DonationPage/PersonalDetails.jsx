@@ -13,33 +13,33 @@ const PersonalDetails = ({ donationAmount, paymentPlan, setDonationAmount }) => 
   // });
 
   // yup validation
-  // const validationSchema = yup.object({
-  //   firstname: yup.string().min(3).required(),
-  //   lastname: yup.string().min(3).required(),
-  //   companyName: yup.string().min(2).required(),
-  //   trustName: yup.string().min(2).required(),
-  //   email: yup.string().email("Please enter a valid email").required()
-  // })
-
-  const  validationSchema = yup.object().shape({
-    firstname: yup.string().min(3).when('identity', {
-      is: 0, // Identity value for individual
-      then: yup.string().required(),
-    }),
-    lastname: yup.string().min(3).when('identity', {
-      is: 0,
-      then: yup.string().required(),
-    }),
-    companyName: yup.string().min(2).when('identity', {
-      is: 1,
-      then: yup.string().required(),
-    }),
-    trustName: yup.string().min(2).when('identity', {
-      is: 2,
-      then: yup.string().required(),
-    }),
+  const validationSchema = yup.object({
+    firstname: yup.string().min(3).required(),
+    lastname: yup.string().min(3).required(),
+    companyName: yup.string().min(2).required(),
+    trustName: yup.string().min(2).required(),
     email: yup.string().email("Please enter a valid email").required()
   })
+
+  // const  validationSchema = yup.object().shape({
+  //   firstname: yup.string().min(3).when('identity', {
+  //     is: 0, // Identity value for individual
+  //     then: yup.string().required(),
+  //   }),
+  //   lastname: yup.string().min(3).when('identity', {
+  //     is: 0,
+  //     then: yup.string().required(),
+  //   }),
+  //   companyName: yup.string().min(2).when('identity', {
+  //     is: 1,
+  //     then: yup.string().required(),
+  //   }),
+  //   trustName: yup.string().min(2).when('identity', {
+  //     is: 2,
+  //     then: yup.string().required(),
+  //   }),
+  //   email: yup.string().email("Please enter a valid email").required()
+  // })
 
   // Formik onSubmit
   const onSubmit = async (values) => {
